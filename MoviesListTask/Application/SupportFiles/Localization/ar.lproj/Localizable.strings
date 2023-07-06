@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+
+  Created by on 11/5/18.
+  Copyright © 2018 ocs. All rights reserved.
+*/
+
+"Hello" = "اهلا";
+"camera.lan" = "الكاميرا";
+"photo.library.lan" = "معرض الصور";
+"cancel.lan" = "الغاء";
+"ERROR" = "حدث خطأ";
+"AGREE" = "موافق";
+"try again" = "إعادة المحاولة";
+"You have a problem connecting to the Internet try Call again and try again" = "لديك مشكلة في الاتصال بالانترنت حاول الاتصال مره اخري و اعادة المحاولة";
+"You have a connection problem" = "لديك مشكلة في الاتصال";
+"is incorrect email" = "هو بريد إلكتروني غير صحيح";
+"is required" = "مطلوب";
+"the length has error" = "يجب ان تدخل ";
+"the length must be at minimum" = "يجب أن يكون الطول كحد أدنى";
+"the length must be at maximum" = "يجب أن يكون الطول كحد أقصى";
+"doesn't match" = "لا يتطابق";

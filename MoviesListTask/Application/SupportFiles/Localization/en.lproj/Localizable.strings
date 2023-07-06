@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Created by on 11/5/18.
+  Copyright © 2018 ocs. All rights reserved.
+*/
+
+
+"Hello" = "Hello";
+"camera.lan" = "Camera";
+"photo.library.lan" = "Photo library";
+"cancel.lan" = "Cancel";
+"ERROR" = "ERROR";
+"AGREE" = "AGREE";
+"try again" = "Try again";
+"You have a problem connecting to the Internet try Call again and try again" = "You have a problem connecting to the Internet try Call again and try again";
+"You have a connection problem" = "You have a connection problem";

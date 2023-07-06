@@ -17,5 +17,3 @@
 ## Create your own module 
 1. First go to Modules Group and right click make new group with your module name 
 2. Second step go to your module group and click new file and select MVP 
-3. Hope that helpful & I hope that this explanation was useful to you
-
