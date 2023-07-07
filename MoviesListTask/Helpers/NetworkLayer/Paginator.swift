@@ -43,10 +43,10 @@ extension Paginator {
         }
     }
     func paginate() {
-       NetworkManager.instance.paramaters["page"] = paginator
-        if NetworkManager.instance.paramaters["custom_page"] != nil {
-            NetworkManager.instance.paramaters["page"] = NetworkManager.instance.paramaters["custom_page"]
-        }
+//       NetworkManager.instance.paramaters["page"] = paginator
+//        if NetworkManager.instance.paramaters["custom_page"] != nil {
+//            NetworkManager.instance.paramaters["page"] = NetworkManager.instance.paramaters["custom_page"]
+//        }
     }
     func incresePaginate() {
         paginator += 1

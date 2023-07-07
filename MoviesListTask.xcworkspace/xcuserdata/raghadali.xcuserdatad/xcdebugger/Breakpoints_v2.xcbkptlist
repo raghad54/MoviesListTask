@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A069DB18-808C-4510-88CA-EAE7164953B6"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoviesListTask/Modules/MoviesList/MoviesListPresenter.swift"
@@ -62,8 +62,8 @@
             filePath = "MoviesListTask/Modules/MoviesList/MoviesListVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "moviesListFetched(model:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -71,16 +71,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9958FFED-0243-4184-AA5C-F550831A4165"
+            uuid = "2A17914A-AB64-436C-8002-E295059D3CAF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesListTask/Modules/MoviesList/MoviesListCell/MoviesListTableCell.swift"
+            filePath = "MoviesListTask/Helpers/NetworkLayer/Paginator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "config(result:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "paginate()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

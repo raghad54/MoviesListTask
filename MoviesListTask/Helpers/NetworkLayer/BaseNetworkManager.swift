@@ -24,7 +24,6 @@ extension BaseNetworkManager {
     // MARK: - ...  refresh for new request
     func refresh() {
         setupObject()
-        paginate()
     }
     // MARK: - ...  setup request object
     func setupObject() {

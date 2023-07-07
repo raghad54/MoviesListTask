@@ -1,7 +1,6 @@
 //
 //  MoviesListVC.swift
-//  BaseIOS
-//
+
 //  Created by Raghad Ali on 06/07/2023.
 //
 
@@ -28,7 +27,8 @@ class MoviesListVC: BaseController, MoviesListViewContract, NavigationBarWithTit
             }
     }
     
-    private var moviesListArray : MoviesListModel?
+    private var moviesListArray =  [Result?]()
+    private var paginationCounter: Int = 1
 }
 
 // MARK: - ...  LifeCycle
@@ -55,53 +55,68 @@ extension MoviesListVC {
     private func setupView() {
         setUpNib()
         setupNavigation()
+        setupTableView()
     }
     
     private func setUpNib() {
         moviesListTableView.register(UINib(nibName: R.nib.moviesListTableCell.name, bundle: nil), forCellReuseIdentifier: MoviesListTableCell.ID)
     }
-    func setupNavigation() {
+    private func setupNavigation() {
         navigation.delegate = self
         navigation.bind(titleLabel: "Movies List", isBackHidden: true)
     }
+    
+    private func setupTableView() {
+        let spinner = UIActivityIndicatorView(style: .large)
+          spinner.startAnimating()
+          moviesListTableView.backgroundView = spinner
+    }
+    
+    private func handleIndicatorWhenLoadingMoreData() {
+        let spinner = UIActivityIndicatorView(style: .large)
+            spinner.startAnimating()
+            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: moviesListTableView.bounds.width, height: CGFloat(44))
+            self.moviesListTableView.tableFooterView = spinner
+            self.moviesListTableView.tableFooterView?.isHidden = false
+    }
+    
 }
 // MARK: - ...  Functions
 extension MoviesListVC {
-    func setup() {
-    }
-    
     func backAction() {
-        
     }
-    
 }
 
 extension MoviesListVC {
     func moviesListFetched(model: MoviesListModel?) {
-        self.moviesListArray = model
+        self.moviesListArray.append(contentsOf: model!.results)
         self.moviesListTableView.reloadData()
     }
     
     func didFail(message: String) {
-    
+        makeAlert(message, closure: {})
     }
     
 }
 
 extension MoviesListVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return moviesListArray?.results.count ?? 0
+        return moviesListArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = moviesListTableView.dequeueReusableCell(withIdentifier: MoviesListTableCell.ID) as! MoviesListTableCell
-        cell.config(result: moviesListArray?.results[indexPath.row])
+        cell.config(result: moviesListArray[indexPath.row])
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-    }
-    
+        let lastIndex = self.moviesListArray.count - 1
+              if indexPath.row == lastIndex {
+                  handleIndicatorWhenLoadingMoreData()
+                  paginationCounter += 1
+                  self.presenter?.getMoviesList(page: paginationCounter)
+              }
+          }
 }

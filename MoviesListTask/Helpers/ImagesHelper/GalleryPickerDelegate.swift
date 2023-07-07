@@ -1,6 +1,6 @@
 //
 //  GalleryPickerDelegate.swift
-//  BaseIOS
+
 //
 //  Created by rh.com.sa on 02/06/2021.
 

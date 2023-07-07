@@ -1,6 +1,6 @@
 //
 //  MoviesListTableCell.swift
-//  BaseIOS
+
 //
 //  Created by Raghad Ali on 07/07/2023.
 //
@@ -29,6 +29,8 @@ class MoviesListTableCell: UITableViewCell {
     func config(result: Result?) {
         self.movieNameLabel.text = result?.title
         self.movieProductionHistoryOfTheFilmLabel.text = result?.releaseDate
+        
+        movieImageView.kf.indicatorType = .activity
         let url = URL(string: "http://image.tmdb.org/t/p/w500/\(result?.backdropPath ?? "")")
         movieImageView.kf.setImage(with: url)
     }
