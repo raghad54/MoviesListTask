@@ -25,7 +25,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qc7-yP-JtI">
-                                <rect key="frame" x="0.0" y="100" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -37,7 +37,7 @@
                             <constraint firstItem="OBu-aC-Ie6" firstAttribute="trailing" secondItem="ckT-Oz-gwY" secondAttribute="trailing" id="FeA-sd-bfK"/>
                             <constraint firstItem="qc7-yP-JtI" firstAttribute="trailing" secondItem="ckT-Oz-gwY" secondAttribute="trailing" id="Zb6-w0-WXg"/>
                             <constraint firstItem="OBu-aC-Ie6" firstAttribute="leading" secondItem="ckT-Oz-gwY" secondAttribute="leading" id="fZz-OM-mpz"/>
-                            <constraint firstAttribute="bottom" secondItem="qc7-yP-JtI" secondAttribute="bottom" constant="13" id="kOh-KB-94x"/>
+                            <constraint firstAttribute="bottom" secondItem="qc7-yP-JtI" secondAttribute="bottom" id="kOh-KB-94x"/>
                             <constraint firstItem="OBu-aC-Ie6" firstAttribute="top" secondItem="wn8-wF-9xc" secondAttribute="top" id="nJY-20-hzv"/>
                         </constraints>
                     </view>

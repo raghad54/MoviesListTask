@@ -19,14 +19,13 @@ class MoviesListTableCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
+        setupView()
     }
     
+    private func setupView() {
+        movieImageView.layer.cornerRadius = 20
+    }
+
     func config(result: Result?) {
         self.movieNameLabel.text = result?.title
         self.movieProductionHistoryOfTheFilmLabel.text = result?.releaseDate

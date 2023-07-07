@@ -46,7 +46,7 @@ class NavigationBar: UIView {
         }
         self.contentView.shadow()
         self.containerView.shadow()
-        self.contentView.backgroundColor = .gray
+        self.contentView.backgroundColor = .systemBrown
         
     }
     

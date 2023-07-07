@@ -27,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZ5-2Q-IzQ">
-                    <rect key="frame" x="0.0" y="13" width="414" height="73"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Cvp-PD-Efn">
                             <rect key="frame" x="8" y="23" width="401" height="50"/>
@@ -55,7 +55,7 @@
                         <constraint firstItem="Cvp-PD-Efn" firstAttribute="leading" secondItem="hZ5-2Q-IzQ" secondAttribute="leadingMargin" id="SJK-aF-6VL"/>
                         <constraint firstItem="Cvp-PD-Efn" firstAttribute="top" secondItem="hZ5-2Q-IzQ" secondAttribute="top" constant="23" id="bZe-Wc-vDM"/>
                         <constraint firstAttribute="trailing" secondItem="Cvp-PD-Efn" secondAttribute="trailing" constant="5" id="gEl-iL-iyz"/>
-                        <constraint firstItem="Cvp-PD-Efn" firstAttribute="bottom" secondItem="hZ5-2Q-IzQ" secondAttribute="bottomMargin" constant="8" id="ppa-tx-QZw"/>
+                        <constraint firstItem="Cvp-PD-Efn" firstAttribute="bottom" secondItem="hZ5-2Q-IzQ" secondAttribute="bottomMargin" constant="-5" id="ppa-tx-QZw"/>
                     </constraints>
                 </view>
             </subviews>
@@ -63,7 +63,7 @@
             <color key="backgroundColor" name="gradiantGreen"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="hZ5-2Q-IzQ" secondAttribute="trailing" id="4q6-OE-4XD"/>
-                <constraint firstItem="hZ5-2Q-IzQ" firstAttribute="top" secondItem="f51-Si-xFZ" secondAttribute="top" constant="13" id="bw3-fG-hd0"/>
+                <constraint firstItem="hZ5-2Q-IzQ" firstAttribute="top" secondItem="f51-Si-xFZ" secondAttribute="top" id="bw3-fG-hd0"/>
                 <constraint firstItem="hZ5-2Q-IzQ" firstAttribute="bottom" secondItem="4In-71-CoG" secondAttribute="bottom" id="gWp-Jc-9LS"/>
                 <constraint firstItem="hZ5-2Q-IzQ" firstAttribute="leading" secondItem="f51-Si-xFZ" secondAttribute="leading" id="mva-lK-pu5"/>
             </constraints>
