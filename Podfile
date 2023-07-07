@@ -11,5 +11,5 @@ target 'BaseIOS' do
   # Pods for BaseIOS
  pod 'Alamofire' , '5.3'
  pod 'Kingfisher'
-pod 'R.swift'
+ pod 'R.swift'
 end

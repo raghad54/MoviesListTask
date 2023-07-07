@@ -207,7 +207,7 @@ struct _R {
     }
   }
 
-  /// This `_R.file` struct is generated, and contains static references to 4 resource files.
+  /// This `_R.file` struct is generated, and contains static references to 5 resource files.
   struct file {
     let bundle: Foundation.Bundle
 
@@ -222,9 +222,12 @@ struct _R {
 
     /// Resource file `NeoSansW23-Bold.ttf`.
     var neoSansW23BoldTtf: RswiftResources.FileResource { .init(name: "NeoSansW23-Bold", pathExtension: "ttf", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `README.md`.
+    var readmeMd: RswiftResources.FileResource { .init(name: "README", pathExtension: "md", bundle: bundle, locale: LocaleReference.none) }
   }
 
-  /// This `_R.nib` struct is generated, and contains static references to 7 nibs.
+  /// This `_R.nib` struct is generated, and contains static references to 10 nibs.
   struct nib {
     let bundle: Foundation.Bundle
 
@@ -234,8 +237,17 @@ struct _R {
     /// Nib `MaintanceScreen`.
     var maintanceScreen: RswiftResources.NibReference<UIKit.UIView> { .init(name: "MaintanceScreen", bundle: bundle) }
 
+    /// Nib `MovieDetailsView`.
+    var movieDetailsView: RswiftResources.NibReference<UIKit.UIView> { .init(name: "MovieDetailsView", bundle: bundle) }
+
+    /// Nib `MoviesListTableCell`.
+    var moviesListTableCell: RswiftResources.NibReference<MoviesListTableCell> { .init(name: "MoviesListTableCell", bundle: bundle) }
+
     /// Nib `MoviesListView`.
     var moviesListView: RswiftResources.NibReference<UIKit.UIView> { .init(name: "MoviesListView", bundle: bundle) }
+
+    /// Nib `NavigationBar`.
+    var navigationBar: RswiftResources.NibReference<UIKit.UIView> { .init(name: "NavigationBar", bundle: bundle) }
 
     /// Nib `NetworkFailScreen`.
     var networkFailScreen: RswiftResources.NibReference<UIKit.UIView> { .init(name: "NetworkFailScreen", bundle: bundle) }
@@ -258,6 +270,8 @@ struct _R {
       if UIKit.UIColor(named: "backgroundOff", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'backgroundOff' is used in nib 'MaintanceScreen', but couldn't be loaded.") }
       if UIKit.UIColor(named: "forthTextColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'forthTextColor' is used in nib 'MaintanceScreen', but couldn't be loaded.") }
       if UIKit.UIColor(named: "secondTextColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'secondTextColor' is used in nib 'MaintanceScreen', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "exclamation-mark-in-a-circle", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'exclamation-mark-in-a-circle' is used in nib 'MoviesListTableCell', but couldn't be loaded.") }
+      if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "chevron.backward") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'chevron.backward' is used in nib 'NavigationBar', but couldn't be loaded.") } }
       if UIKit.UIImage(named: "rectangle7", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'rectangle7' is used in nib 'NetworkFailScreen', but couldn't be loaded.") }
       if UIKit.UIColor(named: "backgroundOff", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'backgroundOff' is used in nib 'NetworkFailScreen', but couldn't be loaded.") }
       if UIKit.UIColor(named: "forthTextColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'forthTextColor' is used in nib 'NetworkFailScreen', but couldn't be loaded.") }
@@ -266,13 +280,17 @@ struct _R {
     }
   }
 
-  /// This `_R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `_R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
     let bundle: Foundation.Bundle
     var launchScreen: launchScreen { .init(bundle: bundle) }
+    var movieDetailsStoryboard: movieDetailsStoryboard { .init(bundle: bundle) }
     var moviesListStoryboard: moviesListStoryboard { .init(bundle: bundle) }
 
     func launchScreen(bundle: Foundation.Bundle) -> launchScreen {
+      .init(bundle: bundle)
+    }
+    func movieDetailsStoryboard(bundle: Foundation.Bundle) -> movieDetailsStoryboard {
       .init(bundle: bundle)
     }
     func moviesListStoryboard(bundle: Foundation.Bundle) -> moviesListStoryboard {
@@ -280,6 +298,7 @@ struct _R {
     }
     func validate() throws {
       try self.launchScreen.validate()
+      try self.movieDetailsStoryboard.validate()
       try self.moviesListStoryboard.validate()
     }
 
@@ -296,9 +315,24 @@ struct _R {
       }
     }
 
+    /// Storyboard `MovieDetailsStoryboard`.
+    struct movieDetailsStoryboard: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
+      typealias InitialController = MovieDetailsVC
+
+      let bundle: Foundation.Bundle
+
+      let name = "MovieDetailsStoryboard"
+
+      var movieDetailsVC: RswiftResources.StoryboardViewControllerIdentifier<MovieDetailsVC> { .init(identifier: "MovieDetailsVC", storyboard: name, bundle: bundle) }
+
+      func validate() throws {
+        if movieDetailsVC() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'movieDetailsVC' could not be loaded from storyboard 'MovieDetailsStoryboard' as 'MovieDetailsVC'.") }
+      }
+    }
+
     /// Storyboard `MoviesListStoryboard`.
     struct moviesListStoryboard: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
-      typealias InitialController = MoviesListVC
+      typealias InitialController = UIKit.UINavigationController
 
       let bundle: Foundation.Bundle
 

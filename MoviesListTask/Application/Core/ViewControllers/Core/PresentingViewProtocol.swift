@@ -12,7 +12,7 @@ import UIKit
 protocol PresentingViewProtocol: NSObjectProtocol {
     func startLoading()
     func stopLoading()
-    func didError(error: String?)
+   // func didError(error: String?)
 }
 
 // implementation of PresentingViewProtocol only in cases where the presenting view is a UIViewController

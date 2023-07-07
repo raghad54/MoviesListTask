@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 // MARK: - ...  Network layer configration
 struct NetworkConfigration {
-    static let URL = "https://pub.rh.net.sa/bookista-backend/public/api/salonProvider/"
+    static let URL = ""
     static let VERSION = "v1"
     static var useAuth: Bool = false
     // MARK: - ...  The Endpoints

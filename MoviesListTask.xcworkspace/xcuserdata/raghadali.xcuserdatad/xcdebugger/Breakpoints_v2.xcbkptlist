@@ -7,17 +7,81 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0FCC98A1-466D-4364-A992-E062F92AD373"
+            uuid = "A069DB18-808C-4510-88CA-EAE7164953B6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesListTask/Modules/MoviesList/MoviesListPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getMoviesList(page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A069DB18-808C-4510-88CA-EAE7164953B6 - 19c77d1d18c868cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoviesList.MoviesListPresenter.getMoviesList(page: Swift.Int) -&gt; ()"
+                  moduleName = "MoviesList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raghadali/Desktop/MoviesListTask/MoviesListTask/MoviesListTask/Modules/MoviesList/MoviesListPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "66">
+               </Location>
+               <Location
+                  uuid = "A069DB18-808C-4510-88CA-EAE7164953B6 - a4ba4318df378e83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MoviesList.NetworkResponse&lt;MoviesList.MoviesListModel&gt;) -&gt; () in MoviesList.MoviesListPresenter.getMoviesList(page: Swift.Int) -&gt; ()"
+                  moduleName = "MoviesList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raghadali/Desktop/MoviesListTask/MoviesListTask/MoviesListTask/Modules/MoviesList/MoviesListPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "242">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C23326D6-960D-4D4B-A6C7-74264B08E0EB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesListTask/Modules/MoviesList/MoviesListVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "moviesListFetched(model:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9958FFED-0243-4184-AA5C-F550831A4165"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesListTask/Helpers/NetworkLayer/Authorization.swift"
+            filePath = "MoviesListTask/Modules/MoviesList/MoviesListCell/MoviesListTableCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "config(result:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
