@@ -17,4 +17,5 @@ protocol MoviesListViewContract: PresentingViewProtocol {
 }
 // MARK: - ...  Router Contract
 protocol MoviesListRouterContract: Router, RouterProtocol {
+    func pushToMovieDetails(movieId:Int)
 }

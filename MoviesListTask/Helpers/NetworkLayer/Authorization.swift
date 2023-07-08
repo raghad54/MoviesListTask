@@ -89,11 +89,12 @@ extension Authorization {
     
     
         func getAuth() -> String {
-            if UserRoot.token() == nil {
-                return key
-            } else {
-                return "Bearer " + (UserRoot.token() ?? "")
-            }
+//            if UserRoot.token() == nil {
+//                return key
+//            } else {
+//                return "Bearer " + (UserRoot.token() ?? "")
+//            }
+            return ""
         }
     }
 

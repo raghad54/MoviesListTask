@@ -46,4 +46,8 @@ extension BaseViewControllerProtocol where Self: BaseController {
     func push(_ view: UIViewController, _ animated: Bool = true) {
         self.navigationController?.pushViewController(view, animated: animated)
     }
+    
+    func pop(_ animated: Bool) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

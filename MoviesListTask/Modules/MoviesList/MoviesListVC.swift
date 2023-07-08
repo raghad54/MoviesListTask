@@ -8,7 +8,7 @@ import Foundation
 import UIKit
 
 // MARK: - ...  ViewController - Vars
-class MoviesListVC: BaseController, MoviesListViewContract, NavigationBarWithTitleDelegate {
+class MoviesListVC: BaseController, MoviesListViewContract {
   
     var presenter: MoviesListPresenter?
     var router: MoviesListRouter?
@@ -82,7 +82,7 @@ extension MoviesListVC {
     
 }
 // MARK: - ...  Functions
-extension MoviesListVC {
+extension MoviesListVC: NavigationBarDelegate {
     func backAction() {
     }
 }
@@ -96,7 +96,6 @@ extension MoviesListVC {
     func didFail(message: String) {
         makeAlert(message, closure: {})
     }
-    
 }
 
 extension MoviesListVC: UITableViewDataSource, UITableViewDelegate {
@@ -119,4 +118,8 @@ extension MoviesListVC: UITableViewDataSource, UITableViewDelegate {
                   self.presenter?.getMoviesList(page: paginationCounter)
               }
           }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        router?.pushToMovieDetails(movieId: moviesListArray[indexPath.row]?.id ?? 0)
+    }
 }

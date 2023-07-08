@@ -16,5 +16,7 @@ class MovieDetailsRouter: Router {
 }
 
 extension MovieDetailsRouter: MovieDetailsRouterContract {
-    
-}
+    func backButtonTapped() {
+       view?.pop(true)
+      }
+   }

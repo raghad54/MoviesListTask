@@ -16,5 +16,9 @@ class MoviesListRouter: Router {
 }
 
 extension MoviesListRouter: MoviesListRouterContract {
+    func pushToMovieDetails(movieId: Int) {
+        view?.push(MovieDetailsVC.create(movieId: movieId))
+    }
+    
     
 }

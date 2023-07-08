@@ -12,7 +12,6 @@ let R = _R(bundle: Bundle(for: BundleFinder.self))
 
 struct _R {
   let bundle: Foundation.Bundle
-  var string: string { .init(bundle: bundle, preferredLanguages: nil, locale: nil) }
   var color: color { .init(bundle: bundle) }
   var image: image { .init(bundle: bundle) }
   var font: font { .init(bundle: bundle) }
@@ -20,15 +19,6 @@ struct _R {
   var nib: nib { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
-  func string(bundle: Foundation.Bundle) -> string {
-    .init(bundle: bundle, preferredLanguages: nil, locale: nil)
-  }
-  func string(locale: Foundation.Locale) -> string {
-    .init(bundle: bundle, preferredLanguages: nil, locale: locale)
-  }
-  func string(preferredLanguages: [String], locale: Locale? = nil) -> string {
-    .init(bundle: bundle, preferredLanguages: preferredLanguages, locale: locale)
-  }
   func color(bundle: Foundation.Bundle) -> color {
     .init(bundle: bundle)
   }
@@ -57,87 +47,6 @@ struct _R {
     let developmentRegion = "en"
   }
 
-  /// This `_R.string` struct is generated, and contains static references to 1 localization tables.
-  struct string {
-    let bundle: Foundation.Bundle
-    let preferredLanguages: [String]?
-    let locale: Locale?
-    var localizable: localizable { .init(source: .init(bundle: bundle, tableName: "Localizable", preferredLanguages: preferredLanguages, locale: locale)) }
-
-    func localizable(preferredLanguages: [String]) -> localizable {
-      .init(source: .init(bundle: bundle, tableName: "Localizable", preferredLanguages: preferredLanguages, locale: locale))
-    }
-
-
-    /// This `_R.string.localizable` struct is generated, and contains static references to 9 localization keys.
-    struct localizable {
-      let source: RswiftResources.StringResource.Source
-
-      /// en translation: AGREE
-      ///
-      /// Key: AGREE
-      ///
-      /// Locales: en, ar
-      var agreE: RswiftResources.StringResource { .init(key: "AGREE", tableName: "Localizable", source: source, developmentValue: "AGREE", comment: nil) }
-
-      /// en translation: ERROR
-      ///
-      /// Key: ERROR
-      ///
-      /// Locales: en, ar
-      var erroR: RswiftResources.StringResource { .init(key: "ERROR", tableName: "Localizable", source: source, developmentValue: "ERROR", comment: nil) }
-
-      /// en translation: Hello
-      ///
-      /// Key: Hello
-      ///
-      /// Locales: en, ar
-      var hello: RswiftResources.StringResource { .init(key: "Hello", tableName: "Localizable", source: source, developmentValue: "Hello", comment: nil) }
-
-      /// en translation: You have a connection problem
-      ///
-      /// Key: You have a connection problem
-      ///
-      /// Locales: en, ar
-      var youHaveAConnectionProblem: RswiftResources.StringResource { .init(key: "You have a connection problem", tableName: "Localizable", source: source, developmentValue: "You have a connection problem", comment: nil) }
-
-      /// en translation: You have a problem connecting to the Internet try Call again and try again
-      ///
-      /// Key: You have a problem connecting to the Internet try Call again and try again
-      ///
-      /// Locales: en, ar
-      var youHaveAProblemConnectingToTheInternetTryCallAgainAndTryAgain: RswiftResources.StringResource { .init(key: "You have a problem connecting to the Internet try Call again and try again", tableName: "Localizable", source: source, developmentValue: "You have a problem connecting to the Internet try Call again and try again", comment: nil) }
-
-      /// en translation: Camera
-      ///
-      /// Key: camera.lan
-      ///
-      /// Locales: en, ar
-      var cameraLan: RswiftResources.StringResource { .init(key: "camera.lan", tableName: "Localizable", source: source, developmentValue: "Camera", comment: nil) }
-
-      /// en translation: Cancel
-      ///
-      /// Key: cancel.lan
-      ///
-      /// Locales: en, ar
-      var cancelLan: RswiftResources.StringResource { .init(key: "cancel.lan", tableName: "Localizable", source: source, developmentValue: "Cancel", comment: nil) }
-
-      /// en translation: Photo library
-      ///
-      /// Key: photo.library.lan
-      ///
-      /// Locales: en, ar
-      var photoLibraryLan: RswiftResources.StringResource { .init(key: "photo.library.lan", tableName: "Localizable", source: source, developmentValue: "Photo library", comment: nil) }
-
-      /// en translation: Try again
-      ///
-      /// Key: try again
-      ///
-      /// Locales: en, ar
-      var tryAgain: RswiftResources.StringResource { .init(key: "try again", tableName: "Localizable", source: source, developmentValue: "Try again", comment: nil) }
-    }
-  }
-
   /// This `_R.color` struct is generated, and contains static references to 7 colors.
   struct color {
     let bundle: Foundation.Bundle
@@ -164,7 +73,7 @@ struct _R {
     var thirdTextColor: RswiftResources.ColorResource { .init(name: "thirdTextColor", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 4 images.
+  /// This `_R.image` struct is generated, and contains static references to 5 images.
   struct image {
     let bundle: Foundation.Bundle
 
@@ -173,6 +82,9 @@ struct _R {
 
     /// Image `check-box`.
     var checkBox: RswiftResources.ImageResource { .init(name: "check-box", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `empty_image_icon`.
+    var empty_image_icon: RswiftResources.ImageResource { .init(name: "empty_image_icon", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `exclamation-mark-in-a-circle`.
     var exclamationMarkInACircle: RswiftResources.ImageResource { .init(name: "exclamation-mark-in-a-circle", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -227,7 +139,7 @@ struct _R {
     var readmeMd: RswiftResources.FileResource { .init(name: "README", pathExtension: "md", bundle: bundle, locale: LocaleReference.none) }
   }
 
-  /// This `_R.nib` struct is generated, and contains static references to 10 nibs.
+  /// This `_R.nib` struct is generated, and contains static references to 9 nibs.
   struct nib {
     let bundle: Foundation.Bundle
 
@@ -242,9 +154,6 @@ struct _R {
 
     /// Nib `MoviesListTableCell`.
     var moviesListTableCell: RswiftResources.NibReference<MoviesListTableCell> { .init(name: "MoviesListTableCell", bundle: bundle) }
-
-    /// Nib `MoviesListView`.
-    var moviesListView: RswiftResources.NibReference<UIKit.UIView> { .init(name: "MoviesListView", bundle: bundle) }
 
     /// Nib `NavigationBar`.
     var navigationBar: RswiftResources.NibReference<UIKit.UIView> { .init(name: "NavigationBar", bundle: bundle) }
@@ -270,7 +179,7 @@ struct _R {
       if UIKit.UIColor(named: "backgroundOff", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'backgroundOff' is used in nib 'MaintanceScreen', but couldn't be loaded.") }
       if UIKit.UIColor(named: "forthTextColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'forthTextColor' is used in nib 'MaintanceScreen', but couldn't be loaded.") }
       if UIKit.UIColor(named: "secondTextColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'secondTextColor' is used in nib 'MaintanceScreen', but couldn't be loaded.") }
-      if UIKit.UIImage(named: "exclamation-mark-in-a-circle", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'exclamation-mark-in-a-circle' is used in nib 'MoviesListTableCell', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "empty_image_icon", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'empty_image_icon' is used in nib 'MoviesListTableCell', but couldn't be loaded.") }
       if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "chevron.backward") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'chevron.backward' is used in nib 'NavigationBar', but couldn't be loaded.") } }
       if UIKit.UIImage(named: "rectangle7", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'rectangle7' is used in nib 'NetworkFailScreen', but couldn't be loaded.") }
       if UIKit.UIColor(named: "backgroundOff", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'backgroundOff' is used in nib 'NetworkFailScreen', but couldn't be loaded.") }

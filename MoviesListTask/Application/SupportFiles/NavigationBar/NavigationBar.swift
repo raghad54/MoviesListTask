@@ -22,7 +22,7 @@ class NavigationBar: UIView {
     @IBOutlet weak var ActionButton: UIButton!
     
     var isDark: Bool?
-    var delegate: NavigationBarWithTitleDelegate?
+    var delegate: NavigationBarDelegate?
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
@@ -35,9 +35,6 @@ class NavigationBar: UIView {
     func setupView() {
         setupNib()
         addAction()
-        checkForDark()
-//        self.titleLabel.adjustsFontSizeToFitWidth = true
-//        self.titleLabel.minimumScaleFactor = 0.25
         self.backButton.setTitle("", for: .normal)
         self.backButton.setImage(UIImage(named: "back_button")?.withRenderingMode(.alwaysOriginal), for: .normal)
         if Localizer.current == .arabic {
@@ -48,21 +45,10 @@ class NavigationBar: UIView {
         self.contentView.backgroundColor = .systemBrown
         
     }
-    
-   
-    func checkForDark() {
-        if isDark ?? true {
-         //   navigationView.backgroundColor = R.color.blackColor()
-           // navigationView.navigationTitle.textColor = .white
-           // navigationView.backButton.tintColor = .white
-        } else {
-          //  navigationView.backgroundColor = .white
-        //    navigationView.navigationTitle.textColor = R.color.blackColor()
-       //     navigationView.backButton.tintColor = R.color.blackColor()
-        }
-    }
+
     func bind(titleLabel: String, isBackHidden: Bool?) {
         self.titleLabel.text = titleLabel
+        self.titleLabel.textAlignment = .center
         self.backButton.isHidden = isBackHidden ?? false
     }
   
