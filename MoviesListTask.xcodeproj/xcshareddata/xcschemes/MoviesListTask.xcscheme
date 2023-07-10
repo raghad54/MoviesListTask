@@ -16,7 +16,21 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "77C5F4962534814100E70C4C"
                BuildableName = "MoviesList.app"
-               BlueprintName = "BaseIOS"
+               BlueprintName = "MoviesListTask"
+               ReferencedContainer = "container:MoviesListTask.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DC9A953B2A59A1BC0055AA60"
+               BuildableName = "MoviesListTests.xctest"
+               BlueprintName = "MoviesListTests"
                ReferencedContainer = "container:MoviesListTask.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,6 +42,17 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DC9A953B2A59A1BC0055AA60"
+               BuildableName = "MoviesListTests.xctest"
+               BlueprintName = "MoviesListTests"
+               ReferencedContainer = "container:MoviesListTask.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -46,7 +71,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "77C5F4962534814100E70C4C"
             BuildableName = "MoviesList.app"
-            BlueprintName = "BaseIOS"
+            BlueprintName = "MoviesListTask"
             ReferencedContainer = "container:MoviesListTask.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -63,7 +88,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "77C5F4962534814100E70C4C"
             BuildableName = "MoviesList.app"
-            BlueprintName = "BaseIOS"
+            BlueprintName = "MoviesListTask"
             ReferencedContainer = "container:MoviesListTask.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

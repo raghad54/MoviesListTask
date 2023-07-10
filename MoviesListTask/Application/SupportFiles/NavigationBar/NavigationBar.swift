@@ -19,7 +19,6 @@ class NavigationBar: UIView {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var ActionButton: UIButton!
     
     var isDark: Bool?
     var delegate: NavigationBarDelegate?
@@ -37,13 +36,8 @@ class NavigationBar: UIView {
         addAction()
         self.backButton.setTitle("", for: .normal)
         self.backButton.setImage(UIImage(named: "back_button")?.withRenderingMode(.alwaysOriginal), for: .normal)
-        if Localizer.current == .arabic {
-            backButton.transform = CGAffineTransform(rotationAngle: 180 * .pi / 180.0);
-        }
         self.contentView.shadow()
         self.containerView.shadow()
-        self.contentView.backgroundColor = .systemBrown
-        
     }
 
     func bind(titleLabel: String, isBackHidden: Bool?) {
@@ -65,7 +59,6 @@ class NavigationBar: UIView {
         Bundle.main.loadNibNamed(R.nib.navigationBar.name, owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
-        contentView.backgroundColor = .systemBrown
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 }

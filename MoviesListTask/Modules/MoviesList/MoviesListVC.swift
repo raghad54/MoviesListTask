@@ -29,6 +29,7 @@ class MoviesListVC: BaseController, MoviesListViewContract {
     
     private var moviesListArray =  [Result?]()
     private var paginationCounter: Int = 1
+    private var refreshControl = UIRefreshControl()
 }
 
 // MARK: - ...  LifeCycle
@@ -43,8 +44,9 @@ extension MoviesListVC {
         presenter?.view = self
         router = .init()
         router?.view = self
-        startLoading()
+        setupRefreshPage()
         presenter?.getMoviesList(page: 1)
+        moviesListArray.removeAll()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -80,6 +82,22 @@ extension MoviesListVC {
             self.moviesListTableView.tableFooterView?.isHidden = false
     }
     
+    private func setupRefreshPage() {
+        refreshControl = UIRefreshControl()
+        if #available(iOS 10.0, *) {
+            moviesListTableView.refreshControl = refreshControl
+        } else {
+            moviesListTableView.addSubview(refreshControl)
+        }
+        refreshControl.tintColor = .gray
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+    }
+    
+    @objc private func refreshData() {
+        self.moviesListArray.removeAll()
+        presenter?.getMoviesList(page: 1)
+    }
+    
 }
 // MARK: - ...  Functions
 extension MoviesListVC: NavigationBarDelegate {
@@ -89,6 +107,7 @@ extension MoviesListVC: NavigationBarDelegate {
 
 extension MoviesListVC {
     func moviesListFetched(model: MoviesListModel?) {
+        self.refreshControl.endRefreshing()
         self.moviesListArray.append(contentsOf: model!.results)
         self.moviesListTableView.reloadData()
     }

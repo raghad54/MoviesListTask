@@ -73,7 +73,7 @@ struct _R {
     var thirdTextColor: RswiftResources.ColorResource { .init(name: "thirdTextColor", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 5 images.
+  /// This `_R.image` struct is generated, and contains static references to 6 images.
   struct image {
     let bundle: Foundation.Bundle
 
@@ -91,6 +91,9 @@ struct _R {
 
     /// Image `rectangle7`.
     var rectangle7: RswiftResources.ImageResource { .init(name: "rectangle7", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `show_the_movie`.
+    var show_the_movie: RswiftResources.ImageResource { .init(name: "show_the_movie", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
   /// This `_R.font` struct is generated, and contains static references to 4 fonts.
@@ -220,7 +223,7 @@ struct _R {
 
       let name = "LaunchScreen"
       func validate() throws {
-
+        if UIKit.UIImage(named: "show_the_movie", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'show_the_movie' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
       }
     }
 
@@ -235,6 +238,7 @@ struct _R {
       var movieDetailsVC: RswiftResources.StoryboardViewControllerIdentifier<MovieDetailsVC> { .init(identifier: "MovieDetailsVC", storyboard: name, bundle: bundle) }
 
       func validate() throws {
+        if UIKit.UIColor(named: "mainColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'mainColor' is used in storyboard 'MovieDetailsStoryboard', but couldn't be loaded.") }
         if movieDetailsVC() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'movieDetailsVC' could not be loaded from storyboard 'MovieDetailsStoryboard' as 'MovieDetailsVC'.") }
       }
     }

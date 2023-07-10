@@ -29,22 +29,22 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r31-W9-K1h">
-                        <rect key="frame" x="139.66666666666663" y="37" width="158.33333333333337" height="27.333333333333329"/>
-                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="20"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="139.66666666666663" y="37" width="158.33333333333337" height="26"/>
+                        <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="20"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ads-jI-X4Z">
-                        <rect key="frame" x="137" y="72" width="109" height="23"/>
-                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="140" y="70.666666666666671" width="109" height="19.666666666666671"/>
+                        <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="KVz-lr-K3D" firstAttribute="top" secondItem="cKb-W1-MsD" secondAttribute="top" constant="17" id="2IG-7J-KyZ"/>
                     <constraint firstAttribute="trailing" secondItem="r31-W9-K1h" secondAttribute="trailing" constant="8" id="9rq-RA-hdM"/>
-                    <constraint firstItem="ads-jI-X4Z" firstAttribute="leading" secondItem="KVz-lr-K3D" secondAttribute="trailing" constant="8" symbolic="YES" id="CBx-4y-XM8"/>
+                    <constraint firstItem="ads-jI-X4Z" firstAttribute="leading" secondItem="KVz-lr-K3D" secondAttribute="trailing" constant="11" id="CBx-4y-XM8"/>
                     <constraint firstAttribute="bottom" secondItem="KVz-lr-K3D" secondAttribute="bottom" constant="18" id="CTP-je-KVT"/>
                     <constraint firstItem="KVz-lr-K3D" firstAttribute="leading" secondItem="cKb-W1-MsD" secondAttribute="leading" constant="8" id="EwF-Ut-Yi6"/>
                     <constraint firstItem="ads-jI-X4Z" firstAttribute="top" secondItem="r31-W9-K1h" secondAttribute="bottom" constant="7.6699999999999999" id="Gzj-ws-LMb"/>
@@ -52,10 +52,10 @@
                     <constraint firstItem="r31-W9-K1h" firstAttribute="top" secondItem="cKb-W1-MsD" secondAttribute="top" constant="37" id="Hs4-yo-BpU"/>
                     <constraint firstItem="r31-W9-K1h" firstAttribute="top" secondItem="cKb-W1-MsD" secondAttribute="top" constant="37" id="X8V-db-ZHd"/>
                     <constraint firstAttribute="trailing" secondItem="r31-W9-K1h" secondAttribute="trailing" constant="8" id="ual-nZ-0tu"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="ads-jI-X4Z" secondAttribute="trailing" constant="44" id="zFE-n8-LU5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ads-jI-X4Z" secondAttribute="trailing" constant="41" id="zFE-n8-LU5"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="1" green="0.96893554327616649" blue="0.8964131307308183" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="movieImageView" destination="KVz-lr-K3D" id="hwd-qL-p8M"/>
                 <outlet property="movieNameLabel" destination="r31-W9-K1h" id="fHf-fV-LNi"/>

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_BaseIOSVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_BaseIOSVersionString[];
+FOUNDATION_EXPORT double Pods_MoviesListTaskVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_MoviesListTaskVersionString[];
 

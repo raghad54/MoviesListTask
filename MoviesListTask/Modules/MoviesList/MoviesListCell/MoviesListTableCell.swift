@@ -24,6 +24,7 @@ class MoviesListTableCell: UITableViewCell {
     
     private func setupView() {
         movieImageView.layer.cornerRadius = 20
+        movieImageView.addTopShadow()
     }
 
     func config(result: Result?) {
@@ -34,5 +35,4 @@ class MoviesListTableCell: UITableViewCell {
         let url = URL(string: "http://image.tmdb.org/t/p/w500/\(result?.backdropPath ?? "")")
         movieImageView.kf.setImage(with: url)
     }
-
 }

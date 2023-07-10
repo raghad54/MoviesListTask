@@ -1,4 +1,4 @@
-${PODS_ROOT}/Target Support Files/Pods-BaseIOS/Pods-BaseIOS-frameworks.sh
+${PODS_ROOT}/Target Support Files/Pods-MoviesListTask/Pods-MoviesListTask-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/R.swift/RswiftResources.framework

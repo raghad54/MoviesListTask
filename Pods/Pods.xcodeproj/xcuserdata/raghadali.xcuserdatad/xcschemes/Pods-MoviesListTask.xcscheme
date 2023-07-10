@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "86DF7667C12F44E42DDE558C9B527AFE"
-               BuildableName = "Pods_BaseIOS.framework"
-               BlueprintName = "Pods-BaseIOS"
+               BlueprintIdentifier = "E848566B62AA840B4E7DDBC931BCFA68"
+               BuildableName = "Pods_MoviesListTask.framework"
+               BlueprintName = "Pods-MoviesListTask"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

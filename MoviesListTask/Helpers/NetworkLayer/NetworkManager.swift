@@ -7,10 +7,6 @@ class NetworkManager: BaseNetworkManager, Authorization {
         let myTimeInterval = TimeInterval(timestamp).int
         var expiration = UD.expiresToken ?? 0
         let loginTimeStamp = UD.loginTimeStamp ?? 0
-        expiration += loginTimeStamp
-        //        if expiration > 0{
-        //            let time = NSDate(timeIntervalSince1970: TimeInterval(expiration))
-        //        }
         if expiration < myTimeInterval {
             return false
         } else {

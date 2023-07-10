@@ -19,7 +19,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBu-aC-Ie6" customClass="NavigationBar" customModule="MoviesList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="106" id="WJH-oB-Q17"/>
                                 </constraints>
@@ -30,7 +30,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ckT-Oz-gwY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.17730304599999999" green="0.52371716499999998" blue="0.80211049320000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qc7-yP-JtI" firstAttribute="top" secondItem="OBu-aC-Ie6" secondAttribute="bottom" constant="-6" id="1Th-7m-kDy"/>
                             <constraint firstItem="qc7-yP-JtI" firstAttribute="leading" secondItem="ckT-Oz-gwY" secondAttribute="leading" id="BAq-V9-E84"/>
@@ -73,9 +73,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
